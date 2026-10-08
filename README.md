@@ -15,7 +15,7 @@ Keys draw their own faces (the chosen color, "2700K", "50%"...). Every action ha
 "Lamp IP(s)" field: enter several IPs separated by commas to control a group with one key.
 
 Prefer a desktop window? See the companion app:
-[yeelight-control](https://github.com/YOUR-USERNAME/yeelight-control).
+[yeelight-control](https://github.com/JohnAntuch/yeelight-control).
 
 ## Download and install
 
