@@ -1,0 +1,69 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+  "Name": "Yeelight Control",
+  "Version": "0.1.0.0",
+  "Author": "You",
+  "Description": "Control Yeelight / Xiaomi lamps directly over your local network (LAN control, no cloud).",
+  "Icon": "imgs/plugin/icon",
+  "Category": "Yeelight",
+  "CategoryIcon": "imgs/plugin/category-icon",
+  "CodePath": "bin/plugin.js",
+  "SDKVersion": 2,
+  "Software": { "MinimumVersion": "6.5" },
+  "OS": [
+    { "Platform": "windows", "MinimumVersion": "10" },
+    { "Platform": "mac", "MinimumVersion": "12" }
+  ],
+  "Nodejs": { "Version": "20", "Debug": "enabled" },
+  "Actions": [
+    {
+      "Name": "Toggle Lamp",
+      "UUID": "com.local.yeelight.toggle",
+      "Icon": "imgs/actions/toggle/icon",
+      "Tooltip": "Turn the lamp(s) on or off.",
+      "PropertyInspectorPath": "ui/toggle.html",
+      "Controllers": ["Keypad"],
+      "DisableAutomaticStates": true,
+      "States": [
+        { "Image": "imgs/actions/toggle/off" },
+        { "Image": "imgs/actions/toggle/on" }
+      ]
+    },
+    {
+      "Name": "Brightness",
+      "UUID": "com.local.yeelight.brightness",
+      "Icon": "imgs/actions/brightness/icon",
+      "Tooltip": "Set a brightness level, or step it up / down.",
+      "PropertyInspectorPath": "ui/brightness.html",
+      "Controllers": ["Keypad"],
+      "States": [{ "Image": "imgs/actions/brightness/key" }]
+    },
+    {
+      "Name": "Color Temperature",
+      "UUID": "com.local.yeelight.colortemp",
+      "Icon": "imgs/actions/color-temp/icon",
+      "Tooltip": "Set a white temperature, or make it warmer / cooler.",
+      "PropertyInspectorPath": "ui/color-temp.html",
+      "Controllers": ["Keypad"],
+      "States": [{ "Image": "imgs/actions/color-temp/key" }]
+    },
+    {
+      "Name": "Color",
+      "UUID": "com.local.yeelight.color",
+      "Icon": "imgs/actions/color/icon",
+      "Tooltip": "Set the lamp to a color.",
+      "PropertyInspectorPath": "ui/color.html",
+      "Controllers": ["Keypad"],
+      "States": [{ "Image": "imgs/actions/color/key" }]
+    },
+    {
+      "Name": "Scene",
+      "UUID": "com.local.yeelight.scene",
+      "Icon": "imgs/actions/scene/icon",
+      "Tooltip": "Apply a preset (color or white + brightness). Turns the lamp on.",
+      "PropertyInspectorPath": "ui/scene.html",
+      "Controllers": ["Keypad"],
+      "States": [{ "Image": "imgs/actions/scene/key" }]
+    }
+  ]
+}

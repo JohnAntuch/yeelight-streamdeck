@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Yeelight</title>
+	<script src="https://sdpi-components.dev/releases/v4/sdpi-components.js"></script>
+</head>
+<body>
+	<sdpi-item label="Lamp IP(s)">
+		<sdpi-textfield setting="ip" placeholder="192.168.1.50, 192.168.1.51"></sdpi-textfield>
+	</sdpi-item>
+	<sdpi-item label="Name">
+		<sdpi-textfield setting="name" placeholder="Movie" maxlength="12"></sdpi-textfield>
+	</sdpi-item>
+	<sdpi-item label="Type">
+		<sdpi-select setting="type" default="ct">
+			<option value="ct">White (color temperature)</option>
+			<option value="color">Color</option>
+		</sdpi-select>
+	</sdpi-item>
+	<sdpi-item label="Kelvin (White)">
+		<sdpi-range setting="kelvin" min="1700" max="6500" step="100" default="2700" showlabels></sdpi-range>
+	</sdpi-item>
+	<sdpi-item label="Color (Color)">
+		<sdpi-color setting="color" default="#ff0000"></sdpi-color>
+	</sdpi-item>
+	<sdpi-item label="Brightness">
+		<sdpi-range setting="brightness" min="1" max="100" default="100" showlabels></sdpi-range>
+	</sdpi-item>
+</body>
+</html>

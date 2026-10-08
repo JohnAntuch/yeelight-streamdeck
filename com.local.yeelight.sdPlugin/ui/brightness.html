@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Yeelight</title>
+	<script src="https://sdpi-components.dev/releases/v4/sdpi-components.js"></script>
+</head>
+<body>
+	<sdpi-item label="Lamp IP(s)">
+		<sdpi-textfield setting="ip" placeholder="192.168.1.50, 192.168.1.51"></sdpi-textfield>
+	</sdpi-item>
+	<sdpi-item label="Mode">
+		<sdpi-select setting="mode" default="set">
+			<option value="set">Set to a level</option>
+			<option value="up">Increase by step</option>
+			<option value="down">Decrease by step</option>
+		</sdpi-select>
+	</sdpi-item>
+	<sdpi-item label="Level (Set)">
+		<sdpi-range setting="level" min="1" max="100" default="50" showlabels></sdpi-range>
+	</sdpi-item>
+	<sdpi-item label="Step (Up/Down)">
+		<sdpi-range setting="step" min="1" max="50" default="10" showlabels></sdpi-range>
+	</sdpi-item>
+</body>
+</html>
