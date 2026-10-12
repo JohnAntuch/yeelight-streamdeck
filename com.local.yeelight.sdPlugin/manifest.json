@@ -14,7 +14,7 @@
     { "Platform": "windows", "MinimumVersion": "10" },
     { "Platform": "mac", "MinimumVersion": "12" }
   ],
-  "Nodejs": { "Version": "20", "Debug": "enabled" },
+  "Nodejs": { "Version": "20"},
   "Actions": [
     {
       "Name": "Toggle Lamp",
