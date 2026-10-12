@@ -1,5 +1,7 @@
 import streamDeck from "@elgato/streamdeck";
 
+import { loadKnownLamps, refreshLamps } from "./yeelight";
+
 import { Brightness } from "./actions/brightness";
 import { ColorAction } from "./actions/color";
 import { ColorTemp } from "./actions/color-temp";
@@ -12,4 +14,7 @@ streamDeck.actions.registerAction(new ColorTemp());
 streamDeck.actions.registerAction(new ColorAction());
 streamDeck.actions.registerAction(new SceneAction());
 
-streamDeck.connect();
+streamDeck.connect().then(async () => {
+	await loadKnownLamps();
+	void refreshLamps(); // learn which lamp is at which IP
+});

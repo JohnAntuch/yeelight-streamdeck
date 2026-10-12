@@ -59,7 +59,7 @@ export class ToggleLamp extends SingletonAction<Settings> {
 		const ip = parseIps(settings.ip)[0];
 		if (!ip) return;
 		try {
-			await key.setState((await isOn(ip)) ? 1 : 0);
+			await key.setState((await isOn(ip, true)) ? 1 : 0);
 		} catch {
 			// Lamp unreachable: leave the key as it is.
 		}
